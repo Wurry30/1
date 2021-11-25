@@ -16,6 +16,9 @@ function changeTitle() {
   const url = 'https://bot.4paradigm.com/v1/openapi/tenants/30978/robots/43f6ac12-4f0c-48e5-8f66-5345a5c836ce/robot/ask?adminkey=aWNzLWJpZy1jdXN0b21lci04ZjQwYTRlZS00YzM5LTQzZTItOTEzNi03NThjODQxYjlhNTktMTYzNzc2MzA4MTkzNA==&customerId=8f40a4ee-4c39-43e2-9136-758c841b9a59&nonce=123&'+'timestamp='+tmp+'&sign='+passhash;
   http.open('POST', url);
   http.setRequestHeader('Content-Type', 'application/json');
+http.setRequestHeader('Access-Control-Allow-Origin', '*');
+http.setRequestHeader("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS");
+http.setRequestHeader("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
   http.send(JSON.stringify({"userId":"myUserId",
       "question":qn.value,
       "channel":"API",
