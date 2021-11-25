@@ -1,10 +1,11 @@
 let myButton = document.getElementById("sqn");
 let qn = document.getElementById('qn');
+let faq = document.getElementById('cars');
 let answer = document.getElementById('ans');
 
 function changeTitle() {    
   console.log('Submit');
-  answer.value = '1';
+  answer.value = 'Question submitted';
   const tmp = String(Date.now());
   console.log(tmp);
 
@@ -33,4 +34,8 @@ function changeTitle() {
 
 myButton.onclick = function() {
   changeTitle();
+}
+
+faq.onchange = function(){
+	qn.value = faq.value;
 }
